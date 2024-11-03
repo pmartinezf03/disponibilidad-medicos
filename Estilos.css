@@ -87,6 +87,10 @@ footer {
     height: 50px;
 
 }
+/* Asegura que todos los elementos del contenedor respeten los límites del ancho */
+#seleccion-municipio * {
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho total */
+}
 
 /* Estilos para el botón específico */
 #seleccion-municipio button {
@@ -98,11 +102,18 @@ footer {
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
+    transition: background-color 0.3s;
     width: 100%;
     height: 50px;
+    max-width: 100%; /* Asegura que el botón no crezca más allá del ancho del contenedor */
 }
 
+/* Asegura que el contenedor del botón no tenga desbordamiento */
+#seleccion-municipio {
+    overflow: hidden; /* Evita que los elementos se desborden del contenedor */
+}
+
+/* Estilos para el label */
 #seleccion-municipio label {
     display: block; /* Asegura que el label ocupe toda la línea */
     font-size: 1.2em;
@@ -110,7 +121,6 @@ footer {
     margin-bottom: 20px; /* Añade espacio debajo del label */
     color: #333;
 }
-
 
 /* Efecto de hover para el botón */
 #seleccion-municipio button:hover {
@@ -120,12 +130,23 @@ footer {
 /* Efecto activo cuando se presiona el botón */
 #seleccion-municipio button:active {
     background-color: #434951;
-    transform: scale(1.98); /* Efecto de clic */
+    /* transform: scale(1.98); Eliminar esto porque hace que el botón se salga del contenedor */
 }
 
-/* Opcional: Para agregar un poco de espacio entre el botón y otros elementos */
+/* Espacio opcional entre el botón y otros elementos */
 #seleccion-municipio button {
     margin-top: 10px;
+}
+
+/* Asegura que la lista también ocupe el ancho del contenedor sin salir de él */
+#seleccion-municipio select {
+    width: 100%; /* Para que ocupe el 100% del contenedor */
+    max-width: 100%; /* Asegura que la lista no crezca más allá del contenedor */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
 }
 
 /* Suponiendo que tu imagen tenga una clase 'logo' */
