@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Disponibilidad de Médicos y Enfermeros en Cantabria</title>
+   <link rel="stylesheet" href="Estilos.css">
+   <!-- Firebase "compat" scripts para evitar el uso de import/export -->
+   <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore-compat.js"></script>
+   <script src="Script.js"></script>
+</head>
+<body>
+    <!-- Añadir la imagen en HTML -->
+<img src="SCS.png" alt="Logo del proyecto" width="150">
+
+   <header>
+       <h1>Disponibilidad de Médicos y Enfermeros en Cantabria</h1>
+       <p>Consulta la disponibilidad de médicos y enfermeros en cada municipio.</p>
+   </header>
+
+   <!-- Selección de municipios -->
+   <section id="seleccion-municipio">
+       <label for="municipioSelect">Selecciona un municipio:</label>
+       <select id="municipioSelect">
+           <option value="">--Selecciona un municipio--</option>
+       </select>
+       <button onclick="mostrarMunicipio()">Ver disponibilidad</button>
+   </section>
+
+   <!-- Contenedor de datos del municipio -->
+   <main id="contenedor-municipios" style="display: none;">
+       <!-- Aquí se cargará la información de cada municipio -->
+   </main>
+
+   <!-- Botón de volver atrás -->
+   <button id="volver-btn" onclick="volverASeleccion()" style="display: none;">Volver atrás</button>
+
+   <footer>
+       <p>&copy; 2024 Disponibilidad de Médicos y Enfermeros en Cantabria. Información actualizada semanalmente.</p>
+   </footer>
+</body>
+</html>
