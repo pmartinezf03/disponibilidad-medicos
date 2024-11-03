@@ -107,7 +107,7 @@ footer {
     display: block; /* Asegura que el label ocupe toda la línea */
     font-size: 1.2em;
     font-weight: bold;
-    margin-bottom: 10px; /* Añade espacio debajo del label */
+    margin-bottom: 20px; /* Añade espacio debajo del label */
     color: #333;
 }
 
@@ -120,7 +120,7 @@ footer {
 /* Efecto activo cuando se presiona el botón */
 #seleccion-municipio button:active {
     background-color: #434951;
-    transform: scale(0.98); /* Efecto de clic */
+    transform: scale(1.98); /* Efecto de clic */
 }
 
 /* Opcional: Para agregar un poco de espacio entre el botón y otros elementos */
